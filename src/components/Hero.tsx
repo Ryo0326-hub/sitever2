@@ -36,6 +36,13 @@ export default function Hero() {
             discordUrl="https://discord.com/users/654344733195239435"
           />
         </div>
+
+        <div className="flex justify-center" style={{ marginTop: '20px' }}>
+          <iframe 
+            src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=6271990" 
+            style={{ border: 'none' }}
+          ></iframe>
+        </div>
       </div>
     </WavyBackground>
   );

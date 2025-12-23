@@ -31,8 +31,8 @@ export default function Hero() {
         <div className="mt-8 flex justify-center">
           <SocialLinks
             linkedinUrl="https://www.linkedin.com/in/ryo-kitano"
-            tryhackmeUrl="https://tryhackme.com/p/ryosigmabyte"
-            spotifyUrl="https://open.spotify.com/playlist/4dfBSELsEDBUFRKGlIUmYC?si=0bb10e7ee30e4ef4"
+            tryhackmeUrl="https://tryhackme.com/p/01ryobyte10"
+            spotifyUrl="https://open.spotify.com/playlist/36nprrZRqI7aDKrfPEOMg3?si=0abf0974e5ed463d"
             discordUrl="https://discord.com/users/654344733195239435"
           />
         </div>

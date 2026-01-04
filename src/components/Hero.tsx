@@ -7,11 +7,11 @@ import { EncryptedText } from "@/components/ui/encrypted-text";
 
 export default function Hero() {
   return (
-    <div className="relative">
-      <WavyBackground className="max-w-4xl mx-auto pb-40">
+    <div className="relative" style={{ marginTop: '-20px' }}>
+      <WavyBackground className="max-w-4xl mx-auto pb-8">
         {/* Content */}
         <div className="relative z-20 text-center" suppressHydrationWarning>
-        <div className="flex justify-center" style={{ marginTop: '20px', marginBottom: '8px' }}>
+        <div className="flex justify-center" style={{ marginTop: '0px', marginBottom: '4px' }}>
           <img src="/icons/spinning matrix.png" alt="Spinning Matrix" className="object-contain" style={{ width: '80px', height: '80px', animation: 'spin 3s linear infinite' }} />
         </div>
         <h1 className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
@@ -23,7 +23,7 @@ export default function Hero() {
           />
         </h1>
 
-        <p className="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+        <p className="text-base md:text-lg mt-1 text-white font-normal inter-var text-center">
           <EncryptedText
             text="Honours Mathematics @ UWaterloo"
             encryptedClassName="text-white/70"
@@ -32,7 +32,7 @@ export default function Hero() {
           />
         </p>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-2 flex justify-center">
           <SocialLinks
             linkedinUrl="https://www.linkedin.com/in/ryo-kitano"
             tryhackmeUrl="https://tryhackme.com/p/01ryobyte10"
@@ -41,7 +41,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className="flex justify-center overflow-hidden" style={{ marginTop: '20px', width: '100%', maxWidth: '100%' }}>
+        <div className="flex justify-center overflow-hidden" style={{ marginTop: '4px', width: '100%', maxWidth: '100%' }}>
           <iframe 
             src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=6271990" 
             style={{ border: 'none', width: '100%', maxWidth: '100%', overflow: 'hidden' }}

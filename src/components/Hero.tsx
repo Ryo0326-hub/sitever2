@@ -8,20 +8,6 @@ import { EncryptedText } from "@/components/ui/encrypted-text";
 export default function Hero() {
   return (
     <div className="relative">
-      {/* Workout Blog Button - Top Left */}
-      <div className="absolute -top-[-190px] left-[50px] z-30">
-        <a href="https://medium.com/@rkitano0326" target="_blank" rel="noreferrer" aria-label="Workout Blog" className="hover:opacity-80 transition">
-          <img src="/icons/workoutblog2.png" alt="Workout Blog" height="420" width="420" className="object-contain" />
-        </a>
-      </div>
-
-      {/* Photography Button - Bottom Right */}
-      <div className="absolute z-30" style={{ bottom: '50px', right: '70px', left: '970px', top: '290px' }}>
-        <a href="#photography" aria-label="Photography Gallery" className="hover:opacity-80 transition">
-          <img src="/icons/photography.png" alt="Photography" height="200" width="200" className="object-contain rounded-xl" />
-        </a>
-      </div>
-
       <WavyBackground className="max-w-4xl mx-auto pb-40">
         {/* Content */}
         <div className="relative z-20 text-center" suppressHydrationWarning>

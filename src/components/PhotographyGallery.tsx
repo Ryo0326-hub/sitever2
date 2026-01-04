@@ -12,9 +12,9 @@ export default function PhotographyGallery() {
         </h2>
         
         {/* 3D Cards with Bird Images */}
-        <div className="flex justify-center mb-12 flex-wrap" style={{ gap: '40px' }}>
-          <CardContainer className="inter-var">
-            <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] w-[18rem] h-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mb-12 gap-6 md:gap-8 lg:gap-10">
+          <CardContainer className="inter-var w-full max-w-[18rem]">
+            <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] w-full h-auto">
               <CardItem
                 as="p"
                 translateZ="60"
@@ -37,8 +37,8 @@ export default function PhotographyGallery() {
               </div>
             </CardBody>
           </CardContainer>
-          <CardContainer className="inter-var">
-            <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] w-[18rem] h-auto">
+          <CardContainer className="inter-var w-full max-w-[18rem]">
+            <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] w-full h-auto">
               <CardItem
                 as="p"
                 translateZ="60"
@@ -61,8 +61,8 @@ export default function PhotographyGallery() {
               </div>
             </CardBody>
           </CardContainer>
-          <CardContainer className="inter-var">
-            <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] w-[18rem] h-auto">
+          <CardContainer className="inter-var w-full max-w-[18rem]">
+            <CardBody className="relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] w-full h-auto">
               <CardItem
                 as="p"
                 translateZ="60"

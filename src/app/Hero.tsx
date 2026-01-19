@@ -1,17 +1,19 @@
 "use client";
 
 import React from "react";
-import { WavyBackground } from "@/components/ui/wavy-background";
-import SocialLinks from "@/components/SocialLinks";
+import SocialLinks from "@/app/SocialLinks";
 import { EncryptedText } from "@/components/ui/encrypted-text";
 
 export default function Hero() {
   return (
-    <div className="relative" style={{ marginTop: '-20px' }}>
-      <WavyBackground className="max-w-4xl mx-auto pb-8">
+    <div className="relative max-w-4xl mx-auto pb-40">
         {/* Content */}
-        <div className="relative z-20 text-center" suppressHydrationWarning>
-        <div className="flex justify-center" style={{ marginTop: '0px', marginBottom: '4px' }}>
+        <div
+          className="relative z-20 text-center"
+          style={{ marginTop: "-5px" }}
+          suppressHydrationWarning
+        >
+        <div className="flex justify-center" style={{ marginTop: '0px', marginBottom: '6px' }}>
           <img src="/icons/spinning matrix.png" alt="Spinning Matrix" className="object-contain" style={{ width: '80px', height: '80px', animation: 'spin 3s linear infinite' }} />
         </div>
         <h1 className="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
@@ -23,7 +25,7 @@ export default function Hero() {
           />
         </h1>
 
-        <p className="text-base md:text-lg mt-1 text-white font-normal inter-var text-center">
+        <p className="text-base md:text-lg mt-2 text-white font-normal inter-var text-center">
           <EncryptedText
             text="Honours Mathematics @ UWaterloo"
             encryptedClassName="text-white/70"
@@ -32,23 +34,24 @@ export default function Hero() {
           />
         </p>
 
-        <div className="mt-2 flex justify-center">
+        <div className="mt-4 flex justify-center">
           <SocialLinks
             linkedinUrl="https://www.linkedin.com/in/ryo-kitano"
-            tryhackmeUrl="https://tryhackme.com/p/01ryobyte10"
-            spotifyUrl="https://open.spotify.com/playlist/36nprrZRqI7aDKrfPEOMg3?si=0abf0974e5ed463d"
+            resumeUrl="https://drive.google.com/file/d/1CbC_Q4y48mqkErDvSLoNuAwDVhM_puCs/view?usp=sharing"
+            githubUrl="https://github.com/Ryo0326-hub"
             discordUrl="https://discord.com/users/654344733195239435"
           />
         </div>
 
-        <div className="flex justify-center overflow-hidden" style={{ marginTop: '4px', width: '100%', maxWidth: '100%' }}>
-          <iframe 
-            src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=6271990" 
-            style={{ border: 'none', width: '100%', maxWidth: '100%', overflow: 'hidden' }}
-          ></iframe>
+        <div className="flex justify-center items-center" style={{ marginTop: '12px' }}>
+          <div style={{ marginLeft: '0px' }} className="md:ml-[190px]">
+            <iframe 
+              src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=6271990" 
+              style={{ border: 'none', width: '100%', maxWidth: '520px', height: '120px', overflow: 'hidden' }}
+            ></iframe>
+          </div>
         </div>
       </div>
-    </WavyBackground>
     </div>
   );
 }

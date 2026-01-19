@@ -4,8 +4,8 @@ import React from "react";
 
 type Props = {
   linkedinUrl: string;
-  tryhackmeUrl: string;
-  spotifyUrl: string;
+  resumeUrl: string;
+  githubUrl: string;
   discordUrl: string;
 };
 
@@ -25,14 +25,14 @@ export default function SocialLinks(props: Props) {
       </div>
 
       <div className="transform -translate-y-12">
-        <a href={props.spotifyUrl} target="_blank" rel="noreferrer" aria-label="Spotify" className="hover:opacity-80 transition">
-          <img src="/icons/spotify.png" alt="Spotify" height="48" width="48" className="object-contain" />
+        <a href={props.githubUrl} target="_blank" rel="noreferrer" aria-label="GitHub" className="hover:opacity-80 transition">
+          <img src="/icons/githublogo.png" alt="GitHub" height="48" width="48" className="object-contain" />
         </a>
       </div>
 
       <div className="transform translate-y-12">
-        <a href={props.tryhackmeUrl} target="_blank" rel="noreferrer" aria-label="TryHackMe" className="hover:opacity-80 transition">
-          <img src="/icons/tryhackme.png" alt="TryHackMe" height="48" width="48" className="object-contain" />
+        <a href={props.resumeUrl} target="_blank" rel="noreferrer" aria-label="Resume" className="hover:opacity-80 transition">
+          <img src="/icons/resume.png" alt="Resume" height="36" width="36" className="object-contain" />
         </a>
       </div>
     </div>

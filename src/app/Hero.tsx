@@ -27,7 +27,7 @@ export default function Hero() {
 
         <p className="text-base md:text-lg mt-2 text-white font-normal inter-var text-center">
           <EncryptedText
-            text="Honours Mathematics @ UWaterloo"
+            text="Mathematics @ UWaterloo"
             encryptedClassName="text-white/70"
             revealedClassName="text-white"
             revealDelayMs={50}

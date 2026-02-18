@@ -1,51 +1,79 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Hero from "@/app/Hero";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 // import BlogPreview from "@/components/BlogPreview";
 
 export default function HomePage() {
-  const [isDark, setIsDark] = useState(false);
-  const bgColor = isDark ? "#000000" : "#4682B4";
+  const bgColor = "#4682B4";
   
-  useEffect(() => {
-    document.body.style.backgroundColor = bgColor;
-    document.documentElement.style.backgroundColor = bgColor;
-  }, [bgColor]);
   const testimonials = [
     {
       quote:
-        "A robust data access layer designed to simplify database management for AI workflows.",
-      name: "Database MCP",
-      designation: "Project",
-      src: "https://images.unsplash.com/photo-1518710843675-2540dd79065c?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Multi-threaded AI agentic system using async call management to optimize Catan gameplay. Project presented @ CxC Datathon 2026.",
+      name: "Catan Agent",
+      designation: "Python, Gemini API, OpenAI, Async",
+      src: "/projects/catan-agent.png",
+      links: {
+        devpost: "https://devpost.com/software/catana-7m83u5"
+      }
     },
     {
       quote:
-        "A network scanning tool built with Scapy to analyze ports and services efficiently.",
-      name: "Port Scanner using Scapy",
-      designation: "Project",
-      src: "https://images.unsplash.com/photo-1600271772470-bd22a42787b3?q=80&w=3072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "Random forest regression model to predict next-quarter revenue, operating income, and net profit for three Japanese public companies.",
+      name: "Financial Forecasting Model",
+      designation: "Python, scikit-learn, pandas",
+      src: "/projects/financial-forecast.png",
+      links: {
+        code: "https://colab.research.google.com/drive/1QVUp-jYklTIS6Fw4vRmCpyGBNKOgL6Qn",
+        report: "https://docs.google.com/document/d/1rtRevoSyVGVwqHZtH3wG0XEVqjaqrddZQcJ-YVLcAdk/edit?tab=t.0"
+      }
     },
     {
       quote:
-        "A modern website built for the UWJSA community with a focus on clarity and speed.",
-      name: "UWJSA Website",
-      designation: "Project",
-      src: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=3070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "TCP port scanner from scratch using Scapy, implementing both TCP SYN and TCP Connect scan. Developed an ARP spoofing attack tool.",
+      name: "Hand-Crafted Port Scanner",
+      designation: "Scapy, Python, TCP/IP, ARP",
+      src: "/projects/port-scanner.png",
+      links: {
+        github: "https://github.com/Ryo0326-hub/personal_portscan"
+      }
     },
     {
-      quote: "Details coming soon.",
-      name: "Project Four",
-      designation: "Project",
-      src: "https://images.unsplash.com/photo-1486915309851-b0cc1f8a0084?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote:
+        "MCP database server that allows Claude LLM to safely query a relational database using structured tools.",
+      name: "Database MCP Server with Safe Querying",
+      designation: "Python, SQLite, MCP, SQL",
+      src: "/projects/database-mcp.png",
+      links: {
+        github: "https://github.com/Ryo0326-hub/db_mcp"
+      }
     },
     {
-      quote: "Details coming soon.",
-      name: "Project Five",
-      designation: "Project",
-      src: "https://images.unsplash.com/photo-1507041957456-9c397ce39c97?q=80&w=3456&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Malware classification pipeline using the EMBER dataset to distinguish malicious ones from benign.",
+      name: "Malware Detection using Neural Network",
+      designation: "Python, TensorFlow/Keras",
+      src: "/projects/malware-detection.png",
+      links: {}
+    },
+    {
+      quote: "Hands-on demonstration of building a functional AI-powered chatbot agent using AWS services and modern prompt-based tooling.",
+      name: "AWS AI Agent",
+      designation: "AWS Lambda, Python",
+      src: "/projects/aws-ai-agent.png",
+      links: {
+        github: "https://github.com/Ryo0326-hub/agent-handson"
+      }
+    },
+    {
+      quote: "An interactive Valentine's Day website with spotlight effects and animations.",
+      name: "Valentine Site",
+      designation: "JavaScript, CSS, Vite",
+      src: "/projects/valentine-site.png",
+      links: {
+        github: "https://github.com/Ryo0326-hub/valentine_site",
+        site: "https://valentine-ver1.vercel.app/"
+      }
     },
   ];
 
@@ -67,23 +95,12 @@ export default function HomePage() {
         className="relative"
         style={{
           backgroundColor: bgColor,
-          marginTop: "15px",
+          marginTop: "-10px",
           padding: "0px 24px 80px",
         }}
       >
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
           <AnimatedTestimonials testimonials={testimonials} />
-        </div>
-        
-        {/* Theme Toggle Button */}
-        <div className="flex justify-center" style={{ marginTop: "9px" }}>
-          <button
-            onClick={() => setIsDark(!isDark)}
-            className="px-5 py-2.5 rounded-full border border-white/30 hover:border-white/50 transition-all text-base"
-            style={{ backgroundColor: "rgba(255, 255, 255, 0.1)", color: "#ffffff" }}
-          >
-            {isDark ? "☀️ Light Mode" : "🌙 Dark Mode"}
-          </button>
         </div>
       </section>
     </main>

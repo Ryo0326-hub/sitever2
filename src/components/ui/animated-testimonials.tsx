@@ -10,6 +10,13 @@ type Testimonial = {
   name: string;
   designation: string;
   src: string;
+  links?: {
+    github?: string;
+    site?: string;
+    code?: string;
+    report?: string;
+    devpost?: string;
+  };
 };
 export const AnimatedTestimonials = ({
   testimonials,
@@ -43,7 +50,7 @@ export const AnimatedTestimonials = ({
     return Math.floor(Math.random() * 21) - 10;
   };
   return (
-    <div className="mx-auto font-sans antialiased" style={{ maxWidth: "500px", padding: "16px 16px", marginLeft: "calc(50% - 250px + 68px)", marginRight: "calc(50% - 250px - 68px)" }}>
+    <div className="mx-auto font-sans antialiased" style={{ maxWidth: "500px", padding: "16px 16px", marginLeft: "calc(50% - 250px + 50px)", marginRight: "calc(50% - 250px - 50px)" }}>
       <div className="relative grid grid-cols-2" style={{ gap: "16px" }}>
         <div className="flex flex-col justify-between py-4">
           <motion.div
@@ -96,26 +103,80 @@ export const AnimatedTestimonials = ({
                 </motion.span>
               ))}
             </motion.p>
+            {testimonials[active].links && Object.keys(testimonials[active].links || {}).length > 0 && (
+              <div className="flex gap-3 mt-5 flex-wrap">
+                {testimonials[active].links?.devpost && (
+                  <a
+                    href={testimonials[active].links.devpost}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 text-sm font-medium rounded-lg bg-blue-600 hover:bg-blue-700 active:bg-gray-600 text-white transition-colors duration-200 border-2 border-white"
+                  >
+                    Devpost
+                  </a>
+                )}
+                {testimonials[active].links?.github && (
+                  <a
+                    href={testimonials[active].links.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 text-sm font-medium rounded-lg bg-blue-600 hover:bg-blue-700 active:bg-gray-600 text-white transition-colors duration-200 border-2 border-white"
+                  >
+                    GitHub
+                  </a>
+                )}
+                {testimonials[active].links?.site && (
+                  <a
+                    href={testimonials[active].links.site}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 text-sm font-medium rounded-lg bg-blue-600 hover:bg-blue-700 active:bg-gray-600 text-white transition-colors duration-200 border-2 border-white"
+                  >
+                    Live Site
+                  </a>
+                )}
+                {testimonials[active].links?.code && (
+                  <a
+                    href={testimonials[active].links.code}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 text-sm font-medium rounded-lg bg-blue-600 hover:bg-blue-700 active:bg-gray-600 text-white transition-colors duration-200 border-2 border-white"
+                  >
+                    Code
+                  </a>
+                )}
+                {testimonials[active].links?.report && (
+                  <a
+                    href={testimonials[active].links.report}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-2 text-sm font-medium rounded-lg bg-blue-600 hover:bg-blue-700 active:bg-gray-600 text-white transition-colors duration-200 border-2 border-white"
+                  >
+                    Report
+                  </a>
+                )}
+              </div>
+            )}
           </motion.div>
-          <div className="flex md:pt-0" style={{ gap: "12px", paddingTop: "12px" }}>
+          <div className="flex justify-end md:pt-0" style={{ gap: "16px", paddingTop: "12px", paddingRight: "0px", paddingLeft: "215px" }}>
             <button
               onClick={handlePrev}
-              className="group/button flex items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
-              style={{ width: "22px", height: "22px" }}
+              className="group/button flex items-center justify-center rounded-xl bg-white/15 hover:bg-white/25 backdrop-blur-md shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 hover:border-white/40"
+              style={{ width: "48px", height: "32px" }}
             >
-              <IconArrowLeft className="text-black transition-transform duration-300 group-hover/button:rotate-12 dark:text-neutral-400" style={{ width: "12px", height: "12px" }} />
+              <IconArrowLeft className="text-white transition-all duration-300 group-hover/button:-translate-x-1" style={{ width: "20px", height: "20px" }} />
             </button>
             <button
               onClick={handleNext}
-              className="group/button flex items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
-              style={{ width: "22px", height: "22px" }}
+              className="group/button flex items-center justify-center rounded-xl bg-white/15 hover:bg-white/25 backdrop-blur-md shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 hover:border-white/40"
+              style={{ width: "48px", height: "32px" }}
             >
-              <IconArrowRight className="text-black transition-transform duration-300 group-hover/button:-rotate-12 dark:text-neutral-400" style={{ width: "12px", height: "12px" }} />
+              <IconArrowRight className="text-white transition-all duration-300 group-hover/button:translate-x-1" style={{ width: "20px", height: "20px" }} />
             </button>
           </div>
         </div>
         <div>
-          <div className="relative" style={{ width: "90px", height: "90px" }}>
+          <div className="relative" style={{ width: "120px", height: "160px" }}>
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
